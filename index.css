@@ -1,0 +1,185 @@
+@font-face
+{
+    font-family: Rockwell;
+    src: /*url(fonts/RockwellRegular.woff2) format('woff2'),*/
+    url(fonts/RockwellRegular.woff) format('woff'),
+    url(fonts/RockwellRegular.ttf) format('truetype');
+    font-style: normal; /* обычный */
+}
+
+body
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+header
+{
+
+    font-family: 'Rockwell', 'Times New Roman', serif;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+header table
+{
+    width: 100%;
+    font-size: 16px;
+}
+
+/*header span*/
+/*{*/
+/*display: inline-block;*/
+/*}*/
+
+header td:first-child
+{
+    vertical-align: bottom;
+}
+
+header td:nth-child(2)
+{
+    text-align: center;
+}
+
+header td:last-child
+{
+    text-align: right;
+    vertical-align: bottom;
+}
+
+h1
+{
+    font-size: 50px;
+}
+
+h1, h2
+{
+    -webkit-column-span: all;
+    text-transform: uppercase;
+}
+
+.first-article h2
+{
+    text-align: center;
+}
+
+h2 span
+{
+    font-size: .8em;
+}
+
+.main-block
+{
+    width: 78%;
+    float: left;
+}
+
+.entertain-block
+{
+    width: 21%;
+    float: right;
+    border-left: 1px solid #000;
+    padding-left: 5px;
+}
+
+article
+{
+    font: 14px 'Rockwell', 'Times New Roman', serif;
+}
+
+article p
+{
+    /*-webkit-column-break-inside: avoid;*/
+}
+
+article p:first-child
+{
+    margin-top: 0;
+}
+
+article footer
+{
+    text-align: right;
+}
+
+footer span
+{
+    border-top: 1px solid #000;
+
+}
+
+.deck
+{
+    font-size: 15px;
+    font-style: italic;
+}
+
+figure
+{
+    float: left;
+    margin: 5px;
+}
+
+figcaption
+{
+    font-size: smaller;
+}
+
+.photo-src
+{
+    font-style: italic;
+    color: #555;
+}
+
+.first-article
+{
+    border-bottom: 1px solid #000;
+}
+
+.first-article .content
+{
+    -webkit-column-count: 4;
+}
+
+.first-article img
+{
+    max-height: 250px;
+}
+
+.main-block > div
+{
+    width: 49%;
+    padding: 0 5px;
+}
+
+.main-block > div:nth-child(2n)
+{
+    float: left;
+}
+
+.main-block > div:nth-child(2n + 1)
+{
+    float: right;
+}
+
+.second-article .content, .third-article .content
+{
+    -webkit-column-count: 2;
+}
+
+.second-article img
+{
+    min-width: 100px;
+    max-width: 300px;
+}
+
+.forth-article img
+{
+    width: 100%;
+}
+
+.entertain-block img
+{
+    width: 100%;
+}
