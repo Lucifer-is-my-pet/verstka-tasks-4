@@ -37,8 +37,7 @@
 
 body
 {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
 }
 
 header
@@ -85,7 +84,6 @@ header td:last-child
     width: 100%;
     text-align: center;
     border-collapse: collapse;
-
 }
 
 .masthead td
@@ -150,7 +148,7 @@ article
     font: 14px 'Rockwell', serif;
 }
 
-article p:first-child
+article p:first-child, .content .first-paragraph
 {
     margin-top: 0;
 }
@@ -234,16 +232,47 @@ img
     width: 100%;
 }
 
-.second-article .content, .third-article .content
+.second-article .content, .third-article .content, .sixth-article .content
 {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
 }
 
+/*потому что нельзяпросто так взять и сунуть figure меж колонок*/
+.third-article p.for-img
+{
+    font-size: smaller;
+    -webkit-column-span: all;
+    column-span: all;
+}
+
+.sixth-article .content
+{
+    background: url("img/chili_.png") no-repeat 50%;
+}
+
+.quote
+{
+    -webkit-column-span: all;
+    column-span: all;
+    font: 14px 'Arial Black', sans-serif;
+    text-align: center;
+}
+
+.quote:before
+{
+    content: url("img/quote-left.png");
+}
+
+.quote:after
+{
+    content: url("img/quote-right.png");
+}
+
 .info
 {
-    background-color: #fff;
+    background-color: #eaeaea;
     margin: 0 10px;
 }
 
@@ -258,7 +287,27 @@ img
 .info p
 {
     font-family: sans-serif;
-    padding: 0 2px;
+    padding: 0 5px 5px 5px;
+}
+
+.smile
+{
+    background-color: #ffffe0;
+    margin: 0 10px;
+}
+
+.smile h2
+{
+    font-family: 'Optima', sans-serif;
+    background-color: #ff847f;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.smile p
+{
+    font-family: sans-serif;
+    padding: 0 5px 5px 5px;
 }
 
 .nick
@@ -271,6 +320,7 @@ img
 footer
 {
     clear: both;
+    margin-top: 5px;
 }
 
 footer table
