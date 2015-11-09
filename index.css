@@ -57,7 +57,7 @@ header table
 header td:first-child
 {
     vertical-align: bottom;
-    background: url("img/12_.png") no-repeat;
+    background: url(img/12_.png) no-repeat;
     background-size: 18%;
 }
 
@@ -120,7 +120,7 @@ h1, h2
 
 h2 span
 {
-    font-size: .8em;
+    font-size: 80%;
 }
 
 .main-block
@@ -144,10 +144,11 @@ h2 span
 
 article
 {
-    font: 14px 'Rockwell', serif;
+    font: 14px/16px 'Rockwell', serif;
 }
 
-article p:first-child, .content .first-paragraph
+article p:first-child,
+.article-content .first-paragraph
 {
     margin-top: 0;
 }
@@ -168,7 +169,7 @@ article footer span
     font-weight: bold;
 }
 
-.content .first-paragraph:first-letter {
+.article-content .first-paragraph:first-letter {
     font-size: 1.5em;
 }
 
@@ -189,23 +190,23 @@ figcaption
     color: #555;
 }
 
-.main-block > div
+.main-block .article-container
 {
     width: 49%;
     padding: 0 5px;
 }
 
-.main-block > div:nth-child(2n)
+.main-block .article-container:nth-child(2n)
 {
     float: left;
 }
 
-.main-block > div:nth-child(2n + 1)
+.main-block .article-container:nth-child(2n + 1)
 {
     float: right;
 }
 
-.content
+.article-content
 {
     /*не работает в Опере, грусть*/
     -webkit-hyphens: auto;
@@ -219,7 +220,7 @@ figcaption
     border-bottom: 1px solid #000;
 }
 
-.first-article .content
+.first-article .article-content
 {
     -webkit-column-count: 4;
     -moz-column-count: 4;
@@ -231,7 +232,9 @@ img
     width: 100%;
 }
 
-.second-article .content, .third-article .content, .sixth-article .content
+.second-article .article-content,
+.third-article .article-content,
+.sixth-article .article-content
 {
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -246,27 +249,28 @@ img
     column-span: all;
 }
 
-.sixth-article .content
+.sixth-article .article-content
 {
-    background: url("img/chili_.png") no-repeat 50%;
+    background: url(img/chili_.png) no-repeat 50%;
 }
 
-.quote
+blockquote
 {
     -webkit-column-span: all;
     column-span: all;
     font: 14px 'Arial Black', sans-serif;
     text-align: center;
+    margin: 5px 0; /*для себя, чтоб не съезжало ничего*/
 }
 
-.quote:before
+blockquote:before
 {
-    content: url("img/quote-left.png");
+    content: url(img/quote-left.png);
 }
 
-.quote:after
+blockquote:after
 {
-    content: url("img/quote-right.png");
+    content: url(img/quote-right.png);
 }
 
 .info
@@ -286,7 +290,7 @@ img
 .info p
 {
     font-family: sans-serif;
-    padding: 0 5px 5px 5px;
+    padding: 0 5px 5px;
 }
 
 .facts
@@ -303,9 +307,10 @@ img
     margin: 5px 0;
 }
 
-.facts p, .facts ul
+.facts p,
+.facts ul
 {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     padding: 0 5px 5px 5px;
     margin-bottom: 2px;
 }
@@ -328,41 +333,34 @@ footer
     margin-top: 5px;
 }
 
-footer table
+main + footer
 {
     display: inline-block;
     background-color: #c8e3cb;
     font-family: 'Verdana', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: bottom;
     width: 100%;
-    border-collapse: collapse;
+    padding: 5px;
 }
 
-footer td
-{
-    padding: 0 5px;
-    height: 30px;
-}
-
-footer td:first-child
-{
-    width: 76%;
-}
-
-footer a, footer a:visited
+.social-link,
+.social-link:visited
 {
     text-decoration: none;
     color: #000;
-}
-
-#vk
-{
-    background: url("img/vk-logo_.png") left no-repeat;
     padding-left: 22px;
 }
 
-#twitter
+.social-vk
 {
-    background: url("img/twitter-logo_.png") left no-repeat;
-    padding-left: 22px;
+    background: url(img/vk-logo_.png) left no-repeat;
+    background-size: contain;
+}
+
+.social-twitter
+{
+    background: url(img/twitter-logo_.png) left no-repeat;
+    background-size: contain;
 }
